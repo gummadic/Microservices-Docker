@@ -1,6 +1,19 @@
-# Microservices-Docker
+# Description
 
-To replicate this project in your development environment(Mac OSX) follow the steps below.
+This repository is an extension to https://github.com/Cogniteinc/devops-exercise. Here, an approach has been adopted by using tools such as Docker, Docker-Compose, Nginx, Flask, HAProxy and MongoDB to automate a development environment that could easily be scaled, deployed and maintained.
+
+In this project, docker-compose helps in composing the necessary pre-build images such as mongo, tatum/HAProxy, tatum/nginx and flask based microservices such as auth service and data service.
+
+Purpose of each image and service is explained below.
+* HAProxy : To perform the load balancing on the micro-services.
+* Nginx   : It acts as a reverse-proxy for both auth and data services
+* Auth service : This microservice will create an user and assigns a token for authentication purpose.
+* Data service : This microservice will fetch data from MongoDB for only authenticated requests.
+* MongoDB : It acts as a document based data store for both auth and data microservices
+
+
+
+# To replicate this project in your development environment(Mac OSX) follow the steps below.
 
 Step 1: Install boot2docker. Check here http://boot2docker.io/
 
@@ -21,6 +34,20 @@ Step 5: Follow the commands below to setup the development environment.
 * docker-compose build
 * docker-compose up
 * docker-compose logs # to see the logs
+
+Step 6: Browse thru using the ip and follow along as mentioned below to see how it works.
+
+* http://192.168.59.104/api/auth/create     # To create a new user
+* Once succesfully created, above web page will redirect to token web page for example: http://192.168.59.104/api/auth/token?key=chandu&secret=chandu
+* [GET/POST] http://192.168.59.104/accounts
+  HEADERS
+  token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
+
+
+
+
+
+
 
 
 
