@@ -37,9 +37,14 @@ Step 5: Follow the commands below to setup the development environment.
 
 Step 6: Browse thru with the IP extracted from boot2docker and follow along as mentioned below to see how it works.
 
+# Auth Service
+* http://192.168.59.104/api/auth/health
 * http://192.168.59.104/api/auth/create     # To create a new user
 * Once succesfully created, above web page will redirect to token web page for example: http://192.168.59.104/api/auth/token?key=chandu&secret=chandu
-* [GET/POST] http://192.168.59.104/accounts
+
+# Data Service
+* http://192.168.59.104/api/data/health
+* [GET/POST] http://192.168.59.104/api/data/accounts
   HEADERS
   token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
 
