@@ -35,13 +35,15 @@ Step 5: Follow the commands below to setup the development environment.
 * docker-compose up
 * docker-compose logs # to see the logs
 
-Step 6: Browse thru using the ip and follow along as mentioned below to see how it works.
+Step 6: Browse thru with the IP extracted from boot2docker and follow along as mentioned below to see how it works.
 
 * http://192.168.59.104/api/auth/create     # To create a new user
 * Once succesfully created, above web page will redirect to token web page for example: http://192.168.59.104/api/auth/token?key=chandu&secret=chandu
 * [GET/POST] http://192.168.59.104/accounts
   HEADERS
   token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
+
+  Note: IP used here i.e. 192.168.59.104 can be different in each and every machine. It depends on the 'boot2docker ip' output.
 
 
 
