@@ -24,7 +24,7 @@ Step 2: Run commands as mentioned below to setup boot2docker.
 * eval "$(boot2docker shellinit)"
 * boot2docker ip     # Later used to browse thru.
 
-Step 3: Clone the repository as mentioned below.
+Step 3: Clone this repository.
 
 
 Step 4: Once cloned, cd to the directory where the code resides. To learn about what the code does, check here https://github.com/Cogniteinc/devops-exercise
