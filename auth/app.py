@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 logger = app.logger
 dao = MongoDao(
-    os.environ['DOCKERMONGO_DB_1_PORT_27017_TCP_ADDR']);
+    os.environ['DB_1_PORT_27017_TCP_ADDR']);
 
 @app.route('/create')
 def create_user():
