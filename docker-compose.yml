@@ -1,0 +1,43 @@
+data:
+  restart: always
+  build: ./data
+  expose:
+    - "8000"
+  volumes:
+    - /usr/src/app/static/
+  links:
+    - db
+  command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+auth:
+  restart: always
+  build: ./auth
+  expose:
+    - "8000"
+  volumes:
+    - /usr/src/app/static/
+  links:
+    - db
+  command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+nginx:
+  restart: always
+  build: ./nginx/
+  ports:
+    - "80:80"
+  volumes:
+    - /www/static
+  volumes_from:
+    - data
+    - auth
+  links:
+    - haproxy
+    - data:data
+    - auth:auth
+db:
+  image: mongo:3.0.2
+haproxy:
+    image: tutum/haproxy
+    links:
+        - auth
+        - data
+    environment:
+        - BACKEND_PORT=8000
