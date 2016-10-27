@@ -2,9 +2,8 @@
 
 This repository is an extension to https://github.com/Cogniteinc/devops-exercise. Here, an approach has been adopted by using tools such as Docker, Docker-Compose, Nginx, Flask, HAProxy and MongoDB to automate a development environment that could easily be scaled, deployed and maintained.
 
-In this project, docker-compose helps in composing the necessary pre-build images such as mongo, tatum/HAProxy, tatum/nginx and flask based microservices such as auth service and data service.
+In this project, docker-compose helps in composing the necessary pre-build images such as mongo, tatum/HAProxy, tatum/nginx and flask based microservices such as auth service and data service. Further, purpose of each image and service is explained below.
 
-Purpose of each image and service is explained below.
 * HAProxy : To perform the load balancing on the micro-services.
 * Nginx   : It acts as a reverse-proxy for both auth and data services
 * Auth service : This microservice will create an user and assigns a token for authentication purpose.
@@ -13,7 +12,8 @@ Purpose of each image and service is explained below.
 
 
 
-# To replicate this project in your development environment(Mac OSX) follow the steps below.
+# Steps to replicate in development environment.
+
 
 Step 1: Install boot2docker. Check here http://boot2docker.io/
 
