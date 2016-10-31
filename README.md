@@ -32,7 +32,7 @@ Step 3: Follow the commands below to setup the development environment.
 * [GET]http://0.0.0.0/api/auth/token?key=chandu&secret=chandu  # To get new token
 
 # Data Service
-* http://0.0.0.0/api/data/health
+* [GET]http://0.0.0.0/api/data/health
 * [POST] http://0.0.0.0:80/api/data/accounts?name=google&valuation=9999999&employees=3000   # To store account data
   HEADERS
   token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
