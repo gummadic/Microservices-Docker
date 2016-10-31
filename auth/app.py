@@ -11,16 +11,22 @@ dao = MongoDao(
 
 @app.route('/create')
 def create_user():
+    logger.debug("Create User");
+    email = request.args.get('email');
+    key = request.args.get('key');
+    secret = request.args.get('secret');
+    result = dao.new(key, secret, email);
+    if result:
+        return Response(json_util.dumps({"User Details":result}), status=201);
+    else:
+        return Response(status=401);
 
-    return render_template('create.html')
 
-
-@app.route("/api/auth/token")
+@app.route("/token")
 def token():
     logger.debug("Get Token");
     key = request.args.get('key');
     secret = request.args.get('secret');
-    dao.new(key, secret)
     result = dao.authenticateClient(key, secret);
     if result:
         return Response(json_util.dumps({"token":result}), status=201);

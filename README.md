@@ -27,17 +27,18 @@ Step 3: Follow the commands below to setup the development environment.
 * docker-compose logs # to see the logs
 
 # Auth Service
-* http://0.0.0.0/api/auth/health
-* http://0.0.0.0/api/auth/create     # To create a new user
-* Once succesfully created, above web page will redirect to token web page for example: http://0.0.0.0/api/auth/token?key=chandu&secret=chandu
+* [GET]http://0.0.0.0/api/auth/health
+* [GET]http://0.0.0.0/api/auth/create?key=chandu&secret=chandu&email=gummadic@gmail.com     # To create a new user
+* [GET]http://0.0.0.0/api/auth/token?key=chandu&secret=chandu  # To get new token
 
 # Data Service
 * http://0.0.0.0/api/data/health
-* [GET/POST] http://0.0.0.0/api/data/accounts
+* [POST] http://0.0.0.0:80/api/data/accounts?name=google&valuation=9999999&employees=3000   # To store account data
   HEADERS
   token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
-
-
+* [GET] http://0.0.0.0/api/data/accounts       # To retrive account data
+  HEADERS
+  token=12398472895nfewnrfjkwerfn203r2h4895ry3y498th3843t04
 
 
 

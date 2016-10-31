@@ -35,7 +35,7 @@ nginx:
 db:
   image: mongo:3.0.2
 haproxy:
-    image: tutum/haproxy
+    image: 'dockercloud/haproxy:latest'
     links:
         - auth
         - data

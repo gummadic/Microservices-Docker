@@ -37,8 +37,8 @@ class MongoDao:
             raise Exception("Gah. Couldnt create the record!");
 
 
-    def new(self, key, secret):
-        record = self._users.insert_one({'key': key, 'secret': secret})
+    def new(self, key, secret, email):
+        record = self._users.insert_one({'key': key, 'secret': secret, 'email': email});
         if record:
             return True;
         else:
