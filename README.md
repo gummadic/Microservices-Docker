@@ -1,6 +1,6 @@
 # Description
 
-This repository is an extension to https://github.com/Cogniteinc/devops-exercise. Here, an approach has been adopted by using tools such as Docker, Docker-Compose, Nginx, Flask, HAProxy and MongoDB to automate a development environment that could easily be scaled, deployed and maintained.
+Here, an approach has been adopted by using tools such as Docker, Docker-Compose, Nginx, Flask, HAProxy and MongoDB to automate a development environment that could easily be scaled, deployed and maintained.
 
 In this project, docker-compose is configured to compose, build and link necessary pre-build images such as tutum/HAProxy, nginx, mongodb and flask based auth and data microservices to automate the solution with minimal deployment tasks. Further, purpose of each image and service is explained below.
 
